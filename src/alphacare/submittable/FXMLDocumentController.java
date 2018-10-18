@@ -11,6 +11,11 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
+import javafx.scene.text.Text;
+
+
 
 /**
  *
@@ -19,12 +24,16 @@ import javafx.scene.control.Label;
 public class FXMLDocumentController implements Initializable {
     
     @FXML
-    private Label label;
+    private Label loginTitle;
+    @FXML
+    private TextField usernameField;
+    @FXML
+    private PasswordField passwordField;
     
     @FXML
-    private void handleButtonAction(ActionEvent event) {
+    private void loginButtonAction(ActionEvent event) {
         System.out.println("You clicked me!");
-        label.setText("Hello World!");
+        loginTitle.setText("success");
     }
     
     @Override
