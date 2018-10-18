@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="200" prefWidth="320" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/9" fx:controller="alphacare.submittable.FXMLDocumentController">
+<AnchorPane id="AnchorPane" prefHeight="200" prefWidth="320" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/9" fx:controller="alphacare.submittable.LoginController">
     <children>
       <Button fx:id="loginButton" layoutX="134.0" layoutY="137.0" onAction="#loginButtonAction" text="Login" />
       <TextField fx:id="usernameField" layoutX="139.0" layoutY="46.0" />
