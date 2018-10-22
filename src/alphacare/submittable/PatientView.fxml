@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="347.0" prefWidth="502.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="alphacare.submittable.PatientMainController">
+<AnchorPane id="AnchorPane" prefHeight="347.0" prefWidth="502.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="alphacare.submittable.PatientController">
    <children>
       <Label fx:id="patientTitle" layoutX="174.0" layoutY="47.0" text="Welcome, patient!">
          <font>
@@ -20,14 +20,15 @@
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
         </columnConstraints>
         <rowConstraints>
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button fx:id="medicalHistoryButton" mnemonicParsing="false" prefHeight="130.0" prefWidth="136.0" text="Check Recent Medical History" textAlignment="CENTER" wrapText="true" />
-            <Button fx:id="bookAppointmentButton" mnemonicParsing="false" prefHeight="130.0" prefWidth="130.0" text="Book Appointment" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="2" />
-            <Button fx:id="prescriptionLogButton" mnemonicParsing="false" prefHeight="130.0" prefWidth="130.0" text="Check Prescription" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="1" />
+            <Button fx:id="viewMedicalHistoryButton" mnemonicParsing="false" prefHeight="130.0" prefWidth="136.0" onAction="#viewMedicalHistoryButtonAction" text="Check Recent Medical History" textAlignment="CENTER" wrapText="true" />
+            <Button fx:id="viewPrescriptionLogButton" mnemonicParsing="false" prefHeight="130.0" prefWidth="130.0" onAction="#viewPrescriptionLogButtonAction" text="Check Prescription" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="1" />
+            <Button fx:id="createAppointmentButton" mnemonicParsing="false" prefHeight="130.0" prefWidth="130.0" onAction="#createAppointmentButtonAction" text="Book Appointment" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="2" />
          </children>
       </GridPane>
    </children>

@@ -14,38 +14,51 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import javafx.scene.text.Text;
 import javafx.stage.Stage;
-
 
 
 /**
  *
- * @author jacob
+ * @author jacob & niko
  */
 public class LoginController implements Initializable {
     
     @FXML
     private Label loginTitle;
     @FXML
+    private Label patientTitle;
+    @FXML
     private TextField usernameField;
     @FXML
     private PasswordField passwordField;
-    
+    @FXML
+    private Button createUserButton;
+
     @FXML
     private void loginButtonAction(ActionEvent event) throws Exception {
         Stage stage = (Stage)loginTitle.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("PatientMain.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("PatientView.fxml"));
         
         Scene scene = new Scene(root);
         
         stage.setScene(scene);
         stage.show();
     }
-    
+//    @FXML
+//    private void createUserButtonAction(ActionEvent event) throws IOException {
+//        Stage stage = (Stage)patientTitle.getScene().getWindow();
+//        Parent root = FXMLLoader.load(getClass().getResource("CreateUserView.fxml"));
+//
+//        Scene scene = new Scene(root);
+//
+//        stage.setScene(scene);
+//        stage.show();
+//    }
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
