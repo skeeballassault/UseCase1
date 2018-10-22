@@ -25,7 +25,7 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button fx:id="medicalHistoryButton" mnemonicParsing="false" prefHeight="130.0" prefWidth="136.0" text="Check Recent Medical History" textAlignment="CENTER" wrapText="true" />
+            <Button fx:id="medicalHistoryButton" mnemonicParsing="false" onAction="#medicalButtonAction" prefHeight="130.0" prefWidth="136.0" text="Check Recent Medical History" textAlignment="CENTER" wrapText="true" />
             <Button fx:id="bookAppointmentButton" mnemonicParsing="false" prefHeight="130.0" prefWidth="130.0" text="Book Appointment" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="2" />
             <Button fx:id="prescriptionLogButton" mnemonicParsing="false" prefHeight="130.0" prefWidth="130.0" text="Check Prescription" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="1" />
          </children>
