@@ -45,6 +45,17 @@ public class LoginController implements Initializable {
         stage.setScene(scene);
         stage.show();
     }
+
+    @FXML
+    private void createAccountButtonAction(ActionEvent event) throws Exception {
+        Stage stage = (Stage)loginTitle.getScene().getWindow();
+        Parent root = FXMLLoader.load(getClass().getResource("CreateAccountMain.fxml"));
+
+        Scene scene = new Scene (root);
+
+        stage.setScene(scene);
+        stage.show();
+    }
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
