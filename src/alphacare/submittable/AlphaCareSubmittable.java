@@ -32,6 +32,14 @@ public class AlphaCareSubmittable extends Application {
      */
     public static void main(String[] args) {
         launch(args);
+        User patientTest = UserFactory.createUser("patient", 1,"pat1","george","smith"); // creates a user of type patient
+        User pharmacistTest = UserFactory.createUser("pharmacist", 1,"pha1","tom","williams"); // creates a user of type pharmacist
+        User doctorTest = UserFactory.createUser("doctor", 1,"doc1","vinny","nardone"); // creates a user of type doctor
+
+        System.out.println(patientTest);
+        System.out.println(pharmacistTest);
+        System.out.println(doctorTest);
+
     }
     
 }
