@@ -6,28 +6,28 @@ public class Patient extends User {
     private String firstName;
     private String lastName;
     private String dateOfBirth;
+    private String password;
     private String email;
 
-    public Patient(int userId, String username, String firstName, String lastName, String dateOfBirth, String email) {
+    public Patient(int userId, String username, String firstName, String lastName, String dateOfBirth, String password, String email) {
         this.userId = userId;
         this.username = username;
         this.firstName = firstName;
         this.lastName = lastName;
         this.dateOfBirth = dateOfBirth;
+        this.password = password;
         this.email = email;
     }
 
     @Override
-    public String getDateOfBirth() { return dateOfBirth; }
+    public int getUserId() {
+        return userId;
+    }
 
     @Override
-    public String getEmail() { return email; }
-
-    @Override
-    public int getUserId() { return userId; }
-
-    @Override
-    public String getUsername() { return username; }
+    public String getUsername() {
+        return username;
+    }
 
     @Override
     public String getFirstName() {
@@ -37,5 +37,20 @@ public class Patient extends User {
     @Override
     public String getLastName() {
         return lastName;
+    }
+
+    @Override
+    public String getDateOfBirth() {
+        return dateOfBirth;
+    }
+
+    @Override
+    public String getPassword() {
+        return password;
+    }
+
+    @Override
+    public String getEmail() {
+        return email;
     }
 }

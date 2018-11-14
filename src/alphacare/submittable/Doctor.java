@@ -6,14 +6,16 @@ public class Doctor extends User {
     private String firstName;
     private String lastName;
     private String dateOfBirth;
+    private String password;
     private String email;
 
-    public Doctor(int userId, String username, String firstName, String lastName, String dateOfBirth, String email) {
+    public Doctor(int userId, String username, String firstName, String lastName, String dateOfBirth, String password, String email) {
         this.userId = userId;
         this.username = username;
         this.firstName = firstName;
         this.lastName = lastName;
         this.dateOfBirth = dateOfBirth;
+        this.password = password;
         this.email = email;
     }
 
@@ -37,7 +39,18 @@ public class Doctor extends User {
         return lastName;
     }
 
-    public String getDateOfBirth() { return dateOfBirth;  }
+    @Override
+    public String getDateOfBirth() {
+        return dateOfBirth;
+    }
 
-    public String getEmail() { return email; }
+    @Override
+    public String getPassword() {
+        return password;
+    }
+
+    @Override
+    public String getEmail() {
+        return email;
+    }
 }

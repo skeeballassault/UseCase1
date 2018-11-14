@@ -4,6 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -18,6 +19,8 @@ public class CreateAccountController implements Initializable {
     @FXML
     private TextField dateOfBirthField;
     @FXML
+    private PasswordField passwordField;
+    @FXML
     private TextField emailField;
     @FXML
     private ComboBox userAccountTypeComboBox;
@@ -28,6 +31,7 @@ public class CreateAccountController implements Initializable {
     private String firstName;
     private String lastName;
     private String dateOfBirth;
+    private String password;
     private String email;
     private User newUser;
 
@@ -38,9 +42,10 @@ public class CreateAccountController implements Initializable {
         this.firstName = firstNameField.getText();
         this.lastName = lastNameField.getText();
         this.dateOfBirth = dateOfBirthField.getText();
+        this.password = passwordField.getText();
         this.email = emailField.getText();
         userId++;
-        newUser = UserFactory.createUser(accountType, userId, username, firstName, lastName, dateOfBirth, email);
+        newUser = UserFactory.createUser(accountType, userId, username, firstName, lastName, dateOfBirth, password, email);
     }
 
     @Override

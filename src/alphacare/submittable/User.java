@@ -7,6 +7,7 @@ public abstract class User {
     public abstract String getLastName();
     public abstract String getDateOfBirth();
     public abstract String getEmail();
+    public abstract String getPassword();
 
 
     @Override
