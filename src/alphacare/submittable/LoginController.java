@@ -32,19 +32,6 @@ public class LoginController implements Initializable {
     @FXML
     private TextField usernameField;
     @FXML
-    private PasswordField passwordField;
-    @FXML
-    private TextField firstNameField;
-    @FXML
-    private TextField lastNameField;
-    @FXML
-    private TextField dateOfBirthField;
-    @FXML
-    private TextField emailField;
-    @FXML
-    private ComboBox userAccountTypeComboBox;
-    
-    @FXML
     private void loginButtonAction(ActionEvent event) throws Exception {
         Stage stage = (Stage)loginTitle.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("PatientMain.fxml"));
