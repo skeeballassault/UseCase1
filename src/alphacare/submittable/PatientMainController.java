@@ -37,6 +37,8 @@ public class PatientMainController implements Initializable {
     private Button prescriptionLogButton;
     @FXML
     private Button bookAppointmentButton;
+
+
     
     @FXML
     private void medicalButtonAction(ActionEvent event) throws IOException {
