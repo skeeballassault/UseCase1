@@ -10,22 +10,22 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="alphacare.submittable.CreateAccountController">
+<AnchorPane prefHeight="298.0" prefWidth="532.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="alphacare.submittable.LoginController">
     <children>
-        <Button fx:id="createAccountButton" layoutX="172.0" layoutY="243.0" onAction="#createAccountButtonAction" text="Create Account" />
-        <Text layoutX="56.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username:" />
         <TextField fx:id="usernameField" layoutX="139.0" layoutY="31.0" promptText="Username" />
-        <Text layoutX="57.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password:" />
-        <PasswordField fx:id="passwordField" layoutX="139.0" layoutY="132.0" promptText="Password" />
-        <Label fx:id="loginTitle" layoutX="21.0" layoutY="14.0" text="Create an Account" />
-        <Text layoutX="56.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="First Name:" />
         <TextField fx:id="firstNameField" layoutX="139.0" layoutY="67.0" promptText="First Name" />
-        <Text layoutX="54.0" layoutY="184.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Last Name:" />
-        <PasswordField fx:id="lastNameField" layoutX="139.0" layoutY="167.0" promptText="Last Name" />
-        <Text layoutX="58.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date of Birth:" />
-        <TextField fx:id="dateOfBirthField" layoutX="139.0" layoutY="100.0" promptText="Date of Birth" />
-        <Text layoutX="55.0" layoutY="217.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email:" />
-        <PasswordField fx:id="emailField" layoutX="139.0" layoutY="200.0" promptText="Email" />
+      <TextField fx:id="lastNameField" layoutX="139.0" layoutY="103.0" promptText="Last Name" />
+        <TextField fx:id="dateOfBirthField" layoutX="139.0" layoutY="136.0" promptText="Date of Birth" />
+        <PasswordField fx:id="passwordField" layoutX="139.0" layoutY="171.0" promptText="Password" />
+      <TextField fx:id="emailField" layoutX="139.0" layoutY="209.0" promptText="Email" />
+        <Text layoutX="37.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date of Birth:" />
+        <Button fx:id="createAccountButton" layoutX="172.0" layoutY="243.0" onAction="#createAccountButtonAction" text="Create Account" />
+        <Text layoutX="37.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username:" />
+        <Text layoutX="38.0" layoutY="189.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password:" />
+        <Label fx:id="loginTitle" layoutX="21.0" layoutY="14.0" text="Create an Account" />
+        <Text layoutX="37.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="First Name:" />
+        <Text layoutX="37.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Last Name:" />
+        <Text layoutX="38.0" layoutY="227.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email:" />
         <ComboBox fx:id="userAccountTypeComboBox" layoutX="322.0" layoutY="31.0" prefWidth="200.0" promptText="Account Type">
             <items>
                 <FXCollections fx:factory="observableArrayList">
