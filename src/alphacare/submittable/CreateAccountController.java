@@ -25,7 +25,7 @@ public class CreateAccountController implements Initializable {
     @FXML
     private ComboBox userAccountTypeComboBox;
 
-    public int userId = 0;
+    public int userId;
     private String accountType;
     private String username;
     private String firstName;
@@ -46,6 +46,7 @@ public class CreateAccountController implements Initializable {
         this.email = emailField.getText();
         userId++;
         newUser = UserFactory.createUser(accountType, userId, username, firstName, lastName, dateOfBirth, password, email);
+        System.out.println(newUser);
     }
 
     @Override

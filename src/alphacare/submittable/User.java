@@ -12,7 +12,13 @@ public abstract class User {
 
     @Override
     public String toString(){
-        return "User ID: " + this.getUserId() + ", Username: " + this.getUsername() + ", First Name: " + this.getFirstName() + ", Last Name: " + this.getLastName();
+        return "User ID: " + this.getUserId() +
+                ", Username: " + this.getUsername() +
+                ", First Name: " + this.getFirstName() +
+                ", Last Name: " + this.getLastName() +
+                ", Date of Birth:" + this.getDateOfBirth() +
+                ", Email: " + this.getEmail() +
+                ", Password: " + this.getPassword();
     }
 
 }

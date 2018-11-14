@@ -31,9 +31,7 @@ public class Pharmacist extends User {
     }
 
     @Override
-    public String getFirstName() {
-        return firstName;
-    }
+    public String getFirstName() { return firstName; }
 
     @Override
     public String getLastName() {
