@@ -5,6 +5,9 @@ public abstract class User {
     public abstract String getUsername();
     public abstract String getFirstName();
     public abstract String getLastName();
+    public abstract String getDateOfBirth();
+    public abstract String getEmail();
+
 
     @Override
     public String toString(){
