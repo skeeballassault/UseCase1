@@ -7,6 +7,8 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
 
 /**
@@ -38,6 +40,7 @@ public class CreateAccountController implements Initializable {
     private String password;
     private String email;
     private User newUser;
+    private List<User> listOfUsers; //this was just for testing purposes.
 
     @FXML
     private void createAccountButtonAction(ActionEvent event) throws Exception {
@@ -49,8 +52,9 @@ public class CreateAccountController implements Initializable {
         this.password = passwordField.getText();
         this.email = emailField.getText();
         userId++;
+        listOfUsers = new ArrayList();
         newUser = UserFactory.createUser(accountType, userId, username, firstName, lastName, dateOfBirth, password, email);
-        System.out.println(newUser);
+        listOfUsers.add(newUser);
     }
 
     @Override
