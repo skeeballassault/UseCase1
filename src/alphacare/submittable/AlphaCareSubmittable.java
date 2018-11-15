@@ -14,6 +14,7 @@ import javafx.stage.Stage;
 /**
  *
  * @author jacob
+ * @author niko
  */
 public class AlphaCareSubmittable extends Application {
     

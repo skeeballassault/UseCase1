@@ -1,5 +1,9 @@
 package alphacare.submittable;
 
+/**
+ * @author niko
+ */
+
 public abstract class User {
     public abstract int getUserId();
     public abstract String getUsername();

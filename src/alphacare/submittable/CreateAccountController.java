@@ -9,6 +9,10 @@ import javafx.scene.control.TextField;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+/**
+ * @author niko
+ */
+
 public class CreateAccountController implements Initializable {
     @FXML
     private TextField usernameField;

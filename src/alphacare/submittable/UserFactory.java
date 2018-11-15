@@ -1,5 +1,9 @@
 package alphacare.submittable;
 
+/**
+ * @author niko
+ */
+
 public class UserFactory {
     public static User createUser(String userType, int userId, String username, String firstName, String lastName, String dateOfBirth, String password, String email){
         if("DOCTOR".equalsIgnoreCase(userType)) return new Doctor(userId,username,firstName,lastName, dateOfBirth, password, email);
