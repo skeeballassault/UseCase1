@@ -51,6 +51,17 @@ public class PatientMainController implements Initializable {
         stage.show();
     }
     
+    @FXML
+    private void prescriptionLogButton(ActionEvent event) throws IOException {
+        Stage stage = (Stage)patientTitle.getScene().getWindow();
+        Parent root1 = FXMLLoader.load(getClass().getResource("PrescriptionsListView.fxml"));
+        
+        Scene scene = new Scene(root1);
+        
+        stage.setScene(scene);
+        stage.show();
+    }
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
