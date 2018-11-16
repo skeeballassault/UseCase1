@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.SplitPane?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="alphacare.submittable.patientMedicalHistoryController">
@@ -21,15 +20,11 @@
                     <items>
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                            <children>
-                              <TextField fx:id="historyTitle" editable="true" layoutY="1.0" mouseTransparent="true" pickOnBounds="false" prefHeight="62.0" prefWidth="302.0" AnchorPane.topAnchor="1.0" />
+                              <Label fx:id="historyTitle" layoutX="11.0" layoutY="5.0" prefHeight="56.0" prefWidth="287.0" wrapText="true" />
                            </children></AnchorPane>
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                            <children>
-                              <TextField editable="false" layoutX="6.0" layoutY="1.0" mouseTransparent="true" pickOnBounds="false" prefHeight="326.0" prefWidth="295.0">
-                                 <padding>
-                                    <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
-                                 </padding>
-                              </TextField>
+                              <Label fx:id="historyEntry" layoutX="14.0" layoutY="14.0" prefHeight="56.0" prefWidth="287.0" wrapText="true" />
                            </children></AnchorPane>
                     </items>
                   </SplitPane>
