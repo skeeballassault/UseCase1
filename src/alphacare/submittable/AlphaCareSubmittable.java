@@ -5,6 +5,8 @@
  */
 package alphacare.submittable;
 
+import java.io.File;
+import java.io.IOException;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -31,8 +33,16 @@ public class AlphaCareSubmittable extends Application {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         launch(args);
+        UserList users = new UserList();
+        users.readUsers();
+//        if (users.find("bplatfoot9", "Zjvxd8Csy")) {
+//            System.out.println("yay");
+//        } else {
+//            System.out.println("boo");
+//        }
+        
 //        User patientTest = UserFactory.createUser("patient", 1,"pat1","george","smith"); // creates a user of type patient
 //        User pharmacistTest = UserFactory.createUser("pharmacist", 1,"pha1","tom","williams"); // creates a user of type pharmacist
 //        User doctorTest = UserFactory.createUser("doctor", 1,"doc1","vinny","nardone"); // creates a user of type doctor

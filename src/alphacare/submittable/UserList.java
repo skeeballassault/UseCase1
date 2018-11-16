@@ -24,25 +24,25 @@ public class UserList {
             Scanner scan = new Scanner (UserList.class.getResourceAsStream(File));
             String line;
             while((line = scan.nextLine()) != null){
-                String[] tokens = line.split(",");
+                String[] data = line.split(",");
                 //Line for user creatiin based on split line
                 //Tokens correspond to each CSV value in the row, increase based on amount of fields
-                //users.add(new User(Integer.parseInt(tokens[0]), tokens[1], tokens[2]) {});
+                users.add(UserFactory.createUser(data[0], Integer.parseInt(data[1]), data[2], data[3], data[4], data[5], data[6], data[7]));
             }
             scan.close();
         }
     }
     
-//    public static synchronized boolean find(String username, String password){
-//    if(null == users){
-//        throw new IllegalStateException("user list is not initialised");
-//    }
-//
-//    return users.stream()
-//            .filter(u -> u.getUsername().equals(username))
-//            .filter(u -> u.getPassword().equals(password))
-//            .findFirst()
-//            .isPresent();
-//    }
+    public static synchronized boolean find(String username, String password){
+        if(null == users){
+            throw new IllegalStateException("user list is not initialised");
+        }
+
+        return users.stream()
+            .filter(u -> u.getUsername().equals(username))
+            .filter(u -> u.getPassword().equals(password))
+            .findFirst()
+            .isPresent();
+    }
     
 }
