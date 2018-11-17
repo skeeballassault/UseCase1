@@ -54,7 +54,7 @@ public class PrescriptionsListController implements Initializable {
                 + " safely. Avoid alcoholic beverages. ");
         log.put("Trenbolone Acetate 1000mg", "Take once a day. Lift heavy things until happy.");
         log.put("Modafinil 60mg", "Take seven a day. It can treat narcolepsy, sleep apnea, and shift work sleep disorder.");
-        log.put("Rohypnol 5mg", "Take two a day. This drug may make you dizzy or drowsy. "
+        log.put("Rohypnol 5mg", "Give to your loved one twice a day. Also known as Flunitrazepam "
                 + "Alcohol or marijuana can make you more dizzy or drowsy. Do not drive, "
                 + "use machinery, or do anything that needs alertness until you can do it"
                 + " safely. Avoid alcoholic beverages. ");
