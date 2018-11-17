@@ -32,14 +32,46 @@ public class LoginController implements Initializable {
     @FXML
     private TextField usernameField;
     @FXML
+    private PasswordField passwordField;
+    @FXML
     private void loginButtonAction(ActionEvent event) throws Exception {
-        Stage stage = (Stage)loginTitle.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("PatientMain.fxml"));
         
-        Scene scene = new Scene(root);
+        boolean success = false;
         
-        stage.setScene(scene);
-        stage.show();
+        //Placeholder users
+        String[] user1 = {"bromboni1997", "Testing1"};
+        String[] user2 = {"roberto5", "Testing2"};
+        String[] user3 = {"stickleg", "Testing3"};
+        
+        String username = usernameField.getText();
+        String password = passwordField.getText();
+        
+        if ( username.equals(user1[0]) ) {
+            if ( password.equals(user1[1]) ) {
+                success = true;
+            }
+        } else if ( username.equals(user2[0]) ) {
+            if ( password.equals(user2[1]) ) {
+                success = true;
+            }
+        } else if ( username.equals(user3[0]) ) {
+            if ( password.equals(user3[1]) ) {
+                success = true;
+            }
+        } else {
+            System.out.println("Username/password invalid!");
+            success = false;
+        }
+        
+        if (success) {
+            Stage stage = (Stage)loginTitle.getScene().getWindow();
+            Parent root = FXMLLoader.load(getClass().getResource("PatientMain.fxml"));
+        
+            Scene scene = new Scene(root);
+        
+            stage.setScene(scene);
+            stage.show();
+        }
     }
 
     @FXML
