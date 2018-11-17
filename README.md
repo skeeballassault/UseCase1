@@ -1,4 +1,4 @@
-# UseCase1
+# Alphacare
 This program's login is a placeholder for the login list. The userlist is contained within USERS.csv, and the UserList class will interpret and store the list of users. At the moment, the standby login names and passwords are:
 
 User: bromboni1997
