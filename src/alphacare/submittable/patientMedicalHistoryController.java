@@ -5,6 +5,7 @@
  */
 package alphacare.submittable;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.Set;
@@ -12,10 +13,15 @@ import java.util.TreeMap;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.input.MouseEvent;
+import javafx.stage.Stage;
 
 
 
@@ -35,6 +41,8 @@ public class patientMedicalHistoryController implements Initializable {
     private Label historyTitle;
     @FXML
     private Label historyEntry;
+    @FXML
+    private Button backButton;
     
     @Override
     public void initialize(URL url, ResourceBundle rb){
@@ -64,5 +72,16 @@ public class patientMedicalHistoryController implements Initializable {
             historyTitle.setText(entryTitle);
             historyEntry.setText(entries.get(entryTitle));
         }
+    }
+
+    @FXML
+    private void changeScene(MouseEvent event) throws IOException{        
+        Stage stage = (Stage)historyTitle.getScene().getWindow();
+        Parent root = FXMLLoader.load(getClass().getResource("PatientMain.fxml"));
+        
+        Scene scene = new Scene(root);
+        
+        stage.setScene(scene);
+        stage.show();
     }
 }
