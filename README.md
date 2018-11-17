@@ -11,3 +11,7 @@ User: stickleg
 Pass: Testing3
 
 Account creation is not yet functional, but all of the fields work, including the password strength checker. Once the account creation is finished, the new users will be appended to the USERS.csv file.
+
+
+
+UserFactory is a class that creates 3 different types of users: Patient, Pharmacist, & Doctor that are saved within an ArrayList. All three of these types are declared based off of what the user selects within the ComboBox. This ArrayList will then be written to the accompanying CSV containing user logins [WIP]
