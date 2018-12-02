@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.control.TextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="alphacare.submittable.WriteHistoryController">
+   <children>
+      <Label id="writeHistoryTitle" layoutX="238.0" layoutY="27.0" text="Write History">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Button id="backButton" layoutX="537.0" layoutY="14.0" mnemonicParsing="false" text="Back" />
+      <Label layoutX="96.0" layoutY="81.0" text="Title of Entry:" />
+      <Label layoutX="61.0" layoutY="141.0" text="Body Text of Entry:" />
+      <TextField id="titleTextField" layoutX="217.0" layoutY="76.0" prefHeight="27.0" prefWidth="176.0" />
+      <TextArea id="bodyTextArea" layoutX="217.0" layoutY="141.0" prefHeight="117.0" prefWidth="200.0" />
+      <Button id="SaveButton" layoutX="271.0" layoutY="304.0" mnemonicParsing="false" onAction="#saveButtonAction" text="Save" />
+      <Label id="confirmationLabel" layoutX="232.0" layoutY="340.0" text="Entry has been saved!" visible="false" />
+   </children>
+</AnchorPane>

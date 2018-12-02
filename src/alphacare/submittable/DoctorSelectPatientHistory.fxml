@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/10.0.1" fx:controller="alphacare.submittable.DoctorSelectPatientHistoryController">
+   <children>
+      <Label id="doctorSelectTitle" layoutX="134.0" layoutY="50.0" text="Select Patient To Write Medical History">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button id="backButton" layoutX="527.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#changeScene" text="Back" />
+      <RadioButton id="JaneDoe" layoutX="250.0" layoutY="168.0" mnemonicParsing="false" text="Jane Doe">
+         <toggleGroup>
+            <ToggleGroup fx:id="patient" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton id="JohnDoe" layoutX="250.0" layoutY="125.0" mnemonicParsing="false" text="John Doe" toggleGroup="$patient" />
+      <RadioButton id="SamSmith" layoutX="251.0" layoutY="214.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="100.0" text="Sam Smith" toggleGroup="$patient" />
+      <Button id="SelectPatientBtn" layoutX="249.0" layoutY="264.0" mnemonicParsing="false" onMouseClicked="#gotoWriteHistory" text="Select Patient" />
+   </children>
+</AnchorPane>
