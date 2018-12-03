@@ -35,13 +35,7 @@ public class AlphaCareSubmittable extends Application {
      */
     public static void main(String[] args) throws IOException {
         launch(args);
-        UserList users = new UserList();
-        users.readUsers();
-//        if (users.find("bplatfoot9", "Zjvxd8Csy")) {
-//            System.out.println("yay");
-//        } else {
-//            System.out.println("boo");
-//        }
+        
         
 //        User patientTest = UserFactory.createUser("patient", 1,"pat1","george","smith"); // creates a user of type patient
 //        User pharmacistTest = UserFactory.createUser("pharmacist", 1,"pha1","tom","williams"); // creates a user of type pharmacist

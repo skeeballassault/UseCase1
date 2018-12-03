@@ -5,6 +5,10 @@
  */
 package alphacare.submittable;
 
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -34,43 +38,74 @@ public class LoginController implements Initializable {
     @FXML
     private PasswordField passwordField;
     @FXML
+    private Label errorLabel;
+    @FXML
     private void loginButtonAction(ActionEvent event) throws Exception {
         
         boolean success = false;
+        String userType = "";
         
-        //Placeholder users
-        String[] user1 = {"bromboni1997", "Testing1"};
-        String[] user2 = {"roberto5", "Testing2"};
-        String[] user3 = {"stickleg", "Testing3"};
+        String csvFile = "USERS.csv";
+        BufferedReader br = null;
+        String line = "";
+        String cvsSplitBy = ",";
         
-        String username = usernameField.getText();
-        String password = passwordField.getText();
-        
-        if ( username.equals(user1[0]) ) {
-            if ( password.equals(user1[1]) ) {
-                success = true;
+        try {
+
+            br = new BufferedReader(new FileReader(csvFile));
+            while ((line = br.readLine()) != null && success == false) {
+
+                // use comma as separator
+                String[] searchUser = line.split(cvsSplitBy);
+                System.out.println(searchUser[0] + searchUser[1] + searchUser[2] + searchUser[3] + searchUser[4] + searchUser[5] + searchUser[6] + searchUser[7]);
+                
+                String username = usernameField.getText();
+                String password = passwordField.getText();
+                
+                if (searchUser[2].equals(username)) {
+                    if (searchUser[6].equals(password)) {
+                        userType = searchUser[0];
+                        success = true;
+                    }
+                }
+
             }
-        } else if ( username.equals(user2[0]) ) {
-            if ( password.equals(user2[1]) ) {
-                success = true;
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            if (br != null) {
+                try {
+                    br.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
             }
-        } else if ( username.equals(user3[0]) ) {
-            if ( password.equals(user3[1]) ) {
-                success = true;
-            }
-        } else {
-            System.out.println("Username/password invalid!");
-            success = false;
         }
+        
+//        if (users.find("bplatfoot9", "Zjvxd8Csy")) {
+//            System.out.println("yay");
+//        } else {
+//            System.out.println("boo");
+//        }
         
         if (success) {
             Stage stage = (Stage)loginTitle.getScene().getWindow();
-            Parent root = FXMLLoader.load(getClass().getResource("PatientMain.fxml"));
-        
+            String document = "PatientMain.fxml";
+            if (userType.equals("PATIENT")) {
+                document = "PatientMain.fxml";
+            } else if (userType.equals("DOCTOR") || userType.equals("PHARMACIST")) {
+                document = "DoctorMain.fxml";
+            }
+            Parent root = FXMLLoader.load(getClass().getResource(document));
             Scene scene = new Scene(root);
         
             stage.setScene(scene);
             stage.show();
+        } else {
+            errorLabel.setText("Account not found!");
         }
     }
 
