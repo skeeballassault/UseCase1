@@ -28,7 +28,7 @@ import javafx.stage.Stage;
  * @author jacob
  */
 public class PatientMainController implements Initializable {
-    
+    @FXML
     private Label patientTitle;
     @FXML
     private Label doctorTitle;
