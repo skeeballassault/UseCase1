@@ -16,7 +16,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
@@ -28,8 +27,8 @@ import javafx.stage.Stage;
  *
  * @author Rafael
  */
-public class DoctorSelectPatientHistoryController implements Initializable {
-    @FXML
+public class DoctorSelectPrescriptionsController implements Initializable {
+   @FXML
     private Label doctorSelectHistoryTitle;
     @FXML
     private ToggleGroup patient;
@@ -57,7 +56,7 @@ public class DoctorSelectPatientHistoryController implements Initializable {
     }    
     
     @FXML
-    private void changeScene1(MouseEvent event) throws IOException{        
+    private void changeScene(MouseEvent event) throws IOException{        
         Stage stage = (Stage)doctorSelectHistoryTitle.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("DoctorMain.fxml"));
         
@@ -75,3 +74,6 @@ public class DoctorSelectPatientHistoryController implements Initializable {
     }
     
 }
+
+    
+

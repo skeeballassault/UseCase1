@@ -9,14 +9,14 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="alphacare.submittable.DoctorSelectPatientHistoryController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="alphacare.submittable.DoctorSelectPrescriptionsController">
    <children>
-      <Label id="doctorSelectHistoryTitle" layoutX="134.0" layoutY="50.0" text="Select Patient To Write Medical History First">
+      <Label id="doctorSelectPrescriptionTitle" layoutX="134.0" layoutY="50.0" text="Select Patient To Make Prescription First">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Button id="backButton" layoutX="527.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#changeScene1" text="Back" />
+      <Button id="backButton" layoutX="527.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#changeScene" text="Back" />
       <RadioButton id="JaneDoe" layoutX="52.0" layoutY="140.0" mnemonicParsing="false" text="Jane Doe">
          <toggleGroup>
             <ToggleGroup fx:id="patient" />

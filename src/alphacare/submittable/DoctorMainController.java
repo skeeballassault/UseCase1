@@ -48,7 +48,7 @@ public class DoctorMainController implements Initializable {
     @FXML
     private void prescriptionSelection(ActionEvent event) throws IOException {
         Stage stage = (Stage)doctorTitle.getScene().getWindow();
-        Parent root1 = FXMLLoader.load(getClass().getResource(".fxml"));
+        Parent root1 = FXMLLoader.load(getClass().getResource("DoctorSelectPrescriptions.fxml"));
         
         Scene scene = new Scene(root1);
         
