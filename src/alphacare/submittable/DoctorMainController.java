@@ -31,8 +31,6 @@ public class DoctorMainController implements Initializable {
     
     @FXML
     private Label doctorTitle;
-    @FXML
-    private Button viewInsuranceButton;
 
 
     @FXML
@@ -56,10 +54,23 @@ public class DoctorMainController implements Initializable {
         stage.show();
     }
     
+    @FXML
+    private void viewInsuranceDetails(ActionEvent event) throws IOException {
+        Stage stage = (Stage)doctorTitle.getScene().getWindow();
+        Parent root1 = FXMLLoader.load(getClass().getResource("InsuranceDetails.fxml"));
+        
+        Scene scene = new Scene(root1);
+        
+        stage.setScene(scene);
+        stage.show();
+    }
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
+
+
 
 
 }

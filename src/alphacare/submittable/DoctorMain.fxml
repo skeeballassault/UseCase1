@@ -26,8 +26,8 @@
         </rowConstraints>
          <children>
             <Button id="writeHistoryBtn" mnemonicParsing="false" onAction="#historySelection" prefHeight="130.0" prefWidth="136.0" text="Write Recent Medical History" textAlignment="CENTER" wrapText="true" />
-            <Button fx:id="viewInsuranceButton" mnemonicParsing="false" prefHeight="130.0" prefWidth="130.0" text="View Patient Insurance" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="2" />
-            <Button mnemonicParsing="false" onAction="#prescriptionSelection" prefHeight="130.0" prefWidth="130.0" text="Write Prescription" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="1" />
+            <Button id="viewInsuranceButton" mnemonicParsing="false" onAction="#viewInsuranceDetails" prefHeight="130.0" prefWidth="130.0" text="View Patient Insurance" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="2" />
+            <Button id="writePrescriptionBtn" mnemonicParsing="false" onAction="#prescriptionSelection" prefHeight="130.0" prefWidth="130.0" text="Write Prescription" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="1" />
          </children>
       </GridPane>
    </children>

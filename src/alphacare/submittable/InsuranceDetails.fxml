@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="alphacare.submittable.InsuranceDetailsController">
+   <children>
+      <Label id="InsuranceDetails" layoutX="219.0" layoutY="36.0" text="Insurance Details">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="124.0" layoutY="75.0" text="Member ID:" />
+      <Label layoutX="144.0" layoutY="117.0" text="Payor #:" />
+      <Label layoutX="84.0" layoutY="155.0" text="Provider Network:" />
+      <Label layoutX="243.0" layoutY="75.0" text="8934289342" />
+      <Label layoutX="242.0" layoutY="117.0" prefHeight="17.0" prefWidth="243.0" text="Square Panda Inc 61271" />
+      <Label layoutX="242.0" layoutY="155.0" text="Principal POS" />
+      <Button id="insuranceBack" layoutX="518.0" layoutY="23.0" mnemonicParsing="false" onAction="#changeScene" text="Back" />
+   </children>
+</AnchorPane>
