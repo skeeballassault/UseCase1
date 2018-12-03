@@ -48,4 +48,6 @@ PATIENT,46,qpenniell19,Quintin,Penniell,12/31/1957,DtOc9glaD,qpenniell19@sogou.c
 PATIENT,47,mscyone1a,Masha,Scyone,10/26/1985,J8qnkEk9G,mscyone1a@wp.com
 PATIENT,48,cgorden1b,Cherianne,Gorden,12/20/2004,Dxoxo8jz,cgorden1b@goo.ne.jp
 PATIENT,49,ehebble1c,Enrico,Hebble,1/15/2003,0Z0OWqE,ehebble1c@oaic.gov.au
-PATIENT,50,gsallows1d,Gray,Sallows,5/23/1989,OG8KueCmn7oO,gsallows1d@dropbox.com
+PATIENT,50,test1,Gray,Sallows,5/23/1989,password1,gsallows1d@dropbox.com
+DOCTOR,51,test2,Gray,Sallows,5/23/1989,password2,gsallows1d@dropbox.com
+PHARMACIST,52,test3,Gray,Sallows,5/23/1989,password3,gsallows1d@dropbox.com
