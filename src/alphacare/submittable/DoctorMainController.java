@@ -32,27 +32,21 @@ public class DoctorMainController implements Initializable {
     @FXML
     private Label doctorTitle;
     @FXML
-    private Button medicalHistoryButton;
-    @FXML
-    private Button prescriptionLogButton;
-    @FXML
     private Button viewInsuranceButton;
 
 
-    
     @FXML
-    private void medicalButtonAction(ActionEvent event) throws IOException {
+    private void historySelection(ActionEvent event) throws IOException {
         Stage stage = (Stage)doctorTitle.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource(".fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("DoctorSelectPatientHistory.fxml"));
         
         Scene scene = new Scene(root);
         
         stage.setScene(scene);
         stage.show();
     }
-    
     @FXML
-    private void prescriptionLogButton(ActionEvent event) throws IOException {
+    private void prescriptionSelection(ActionEvent event) throws IOException {
         Stage stage = (Stage)doctorTitle.getScene().getWindow();
         Parent root1 = FXMLLoader.load(getClass().getResource(".fxml"));
         
@@ -66,5 +60,6 @@ public class DoctorMainController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
-    
+
+
 }

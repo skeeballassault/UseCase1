@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="347.0" prefWidth="502.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="alphacare.submittable.PatientMainController">
+<AnchorPane id="AnchorPane" prefHeight="347.0" prefWidth="502.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="alphacare.submittable.DoctorMainController">
    <children>
       <Label fx:id="doctorTitle" layoutX="174.0" layoutY="47.0" text="Welcome, Doctor!">
          <font>
@@ -25,11 +25,10 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button fx:id="medicalHistoryButton" mnemonicParsing="false" onAction="#medicalButtonAction" prefHeight="130.0" prefWidth="136.0" text="Write Recent Medical History" textAlignment="CENTER" wrapText="true" />
+            <Button id="writeHistoryBtn" mnemonicParsing="false" onAction="#historySelection" prefHeight="130.0" prefWidth="136.0" text="Write Recent Medical History" textAlignment="CENTER" wrapText="true" />
             <Button fx:id="viewInsuranceButton" mnemonicParsing="false" prefHeight="130.0" prefWidth="130.0" text="View Patient Insurance" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="2" />
-            <Button fx:id="prescriptionLogButton" mnemonicParsing="false" onAction="#prescriptionLogButton" prefHeight="130.0" prefWidth="130.0" text="Write Prescription" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="1" />
+            <Button mnemonicParsing="false" onAction="#prescriptionSelection" prefHeight="130.0" prefWidth="130.0" text="Write Prescription" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="1" />
          </children>
       </GridPane>
    </children>
 </AnchorPane>
-

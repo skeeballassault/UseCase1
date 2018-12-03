@@ -27,7 +27,7 @@ import javafx.stage.Stage;
  */
 public class DoctorSelectPatientHistoryController implements Initializable {
 
-    private Label doctorSelectTitle;
+    private Label doctorSelectHistoryTitle;
     @FXML
     private ToggleGroup patient;
 
@@ -42,7 +42,7 @@ public class DoctorSelectPatientHistoryController implements Initializable {
     
     @FXML
     private void changeScene(MouseEvent event) throws IOException{        
-        Stage stage = (Stage)doctorSelectTitle.getScene().getWindow();
+        Stage stage = (Stage)doctorSelectHistoryTitle.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("DoctorMain.fxml"));
         
         Scene scene = new Scene(root);
@@ -54,7 +54,7 @@ public class DoctorSelectPatientHistoryController implements Initializable {
 
     @FXML
     private void gotoWriteHistory(MouseEvent event) throws IOException {
-        Stage stage = (Stage)doctorSelectTitle.getScene().getWindow();
+        Stage stage = (Stage)doctorSelectHistoryTitle.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("WriteHistory.fxml"));
         
         Scene scene = new Scene(root);

@@ -29,18 +29,14 @@ import javafx.stage.Stage;
  */
 public class PatientMainController implements Initializable {
     
-    @FXML
     private Label patientTitle;
     @FXML
-    private Button medicalHistoryButton;
+    private Label doctorTitle;
     @FXML
-    private Button prescriptionLogButton;
-    @FXML
-    private Button bookAppointmentButton;
+    private Button viewInsuranceButton;
 
 
     
-    @FXML
     private void medicalButtonAction(ActionEvent event) throws IOException {
         Stage stage = (Stage)patientTitle.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("patientMedicalHistoryView.fxml"));
@@ -51,7 +47,6 @@ public class PatientMainController implements Initializable {
         stage.show();
     }
     
-    @FXML
     private void prescriptionLogButton(ActionEvent event) throws IOException {
         Stage stage = (Stage)patientTitle.getScene().getWindow();
         Parent root1 = FXMLLoader.load(getClass().getResource("PrescriptionsListView.fxml"));
@@ -66,5 +61,7 @@ public class PatientMainController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
+
+
     
 }
