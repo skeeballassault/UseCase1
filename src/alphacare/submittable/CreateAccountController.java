@@ -154,13 +154,13 @@ public class CreateAccountController implements Initializable {
             
             errorLabel.setText("Account created successfully!");
             
-//            Stage stage = (Stage)passwordField.getScene().getWindow();
-//            String document = "LoginScreen.fxml";
-//            Parent root = FXMLLoader.load(getClass().getResource(document));
-//            Scene scene = new Scene(root);
-//        
-//            stage.setScene(scene);
-//            stage.show();
+            Stage stage = (Stage)passwordField.getScene().getWindow();
+            String document = "LoginScreen.fxml";
+            Parent root = FXMLLoader.load(getClass().getResource(document));
+            Scene scene = new Scene(root);
+        
+            stage.setScene(scene);
+            stage.show();
         }
         
     }
