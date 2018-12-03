@@ -51,3 +51,5 @@ PATIENT,49,ehebble1c,Enrico,Hebble,1/15/2003,0Z0OWqE,ehebble1c@oaic.gov.au
 PATIENT,50,test1,Gray,Sallows,5/23/1989,password1,gsallows1d@dropbox.com
 DOCTOR,51,test2,Gray,Sallows,5/23/1989,password2,gsallows1d@dropbox.com
 PHARMACIST,52,test3,Gray,Sallows,5/23/1989,password3,gsallows1d@dropbox.com
+PATIENT,53,nik,nik,lecce,10/04/1996,password1,test@test.com
+

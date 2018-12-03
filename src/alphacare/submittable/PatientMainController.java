@@ -36,7 +36,7 @@ public class PatientMainController implements Initializable {
     private Button viewInsuranceButton;
 
 
-    
+    @FXML
     private void medicalButtonAction(ActionEvent event) throws IOException {
         Stage stage = (Stage)patientTitle.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("patientMedicalHistoryView.fxml"));
@@ -46,7 +46,7 @@ public class PatientMainController implements Initializable {
         stage.setScene(scene);
         stage.show();
     }
-    
+    @FXML
     private void prescriptionLogButton(ActionEvent event) throws IOException {
         Stage stage = (Stage)patientTitle.getScene().getWindow();
         Parent root1 = FXMLLoader.load(getClass().getResource("PrescriptionsListView.fxml"));

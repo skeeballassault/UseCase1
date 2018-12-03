@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="298.0" prefWidth="532.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="alphacare.submittable.CreateAccountController">
+<AnchorPane prefHeight="259.0" prefWidth="587.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="alphacare.submittable.CreateAccountController">
     <children>
         <TextField fx:id="usernameField" layoutX="139.0" layoutY="31.0" promptText="Username" />
         <Text layoutX="37.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username:" />
@@ -24,9 +24,9 @@
         <Text layoutX="38.0" layoutY="189.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password:" />
         <TextField fx:id="emailField" layoutX="139.0" layoutY="209.0" promptText="Email" />
         <Text layoutX="38.0" layoutY="227.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email:" />
-        <Button fx:id="createAccountButton" layoutX="172.0" layoutY="243.0" onAction="#createAccountButtonAction" text="Create Account" />
+        <Button fx:id="createAccountButton" layoutX="392.0" layoutY="90.0" onAction="#createAccountButtonAction" text="Create Account" />
         <Label fx:id="loginTitle" layoutX="21.0" layoutY="14.0" text="Create an Account" />
-        <ComboBox fx:id="userAccountTypeComboBox" layoutX="322.0" layoutY="31.0" prefWidth="200.0" promptText="Account Type">
+        <ComboBox fx:id="userAccountTypeComboBox" layoutX="322.0" layoutY="31.0" prefHeight="27.0" prefWidth="254.0" promptText="Account Type">
             <items>
                 <FXCollections fx:factory="observableArrayList">
                     <String fx:value="Patient" />
@@ -35,5 +35,6 @@
                 </FXCollections>
             </items>
         </ComboBox>
+      <Label fx:id="errorLabel" layoutX="320.0" layoutY="202.0" prefHeight="37.0" prefWidth="246.0" textFill="RED" />
     </children>
 </AnchorPane>
